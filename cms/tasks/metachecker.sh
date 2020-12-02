@@ -25,6 +25,6 @@ for filepath in `find  ./* -type d`; do
 done
 
 if [[ $issues != "" ]]; then
-    echo -e "${RED}There are issues in: $issues ${NC}"
+    echo -e "${RED}Error: There are issues in: $issues ${NC}"
 fi
 echo "End checking in: $curr_dir"
