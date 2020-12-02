@@ -26,5 +26,6 @@ done
 
 if [[ $issues != "" ]]; then
     echo -e "${RED}Error: There are issues in: $issues ${NC}"
+    exit 1
 fi
 echo "End checking in: $curr_dir"
