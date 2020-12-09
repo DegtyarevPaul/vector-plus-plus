@@ -2,7 +2,7 @@
 
 curr_dir=$(pwd)
 
-echo "Started checking in: $curr_dir"
+echo "Started saving in: $curr_dir"
 
 g++ solver.cc -O3 -o solver.out
 
@@ -16,9 +16,8 @@ fi
 for filepath in $curr_dir/input*.txt; do
 
     filename=`basename $filepath .txt`
-    cat $filepath | $curr_dir/solver.out > $filename.res
-    diff -w -Z -B $filename.res output${filename: -1}.txt || exit 2
+    cat $filepath | $curr_dir/solver.out > output${filename: -1}.txt
     
 done
 
-echo "End checking in: $curr_dir"
+echo "End saving in: $curr_dir"
