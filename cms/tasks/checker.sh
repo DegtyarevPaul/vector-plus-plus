@@ -16,6 +16,7 @@ fi
 for filepath in $curr_dir/input*.txt; do
 
     filename=`basename $filepath .txt`
+    echo "Working with test case: $filename"
     cat $filepath | $curr_dir/solver.out > $filename.res
     diff -w -Z -B $filename.res output${filename: -1}.txt || exit 2
     
