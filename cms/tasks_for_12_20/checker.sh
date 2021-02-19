@@ -13,12 +13,12 @@ else
     exit 1
 fi
 
-for filepath in $curr_dir/input*.txt; do
+for filepath in $curr_dir/input.* ; do
 
-    filename=`basename $filepath .txt`
+    filename=`basename $filepath`
     echo "Working with test case: $filename"
     cat $filepath | $curr_dir/solver.out > temp_$filename.res
-    diff -w -Z -B temp_$filename.res output${filename: -1}.txt || exit 2
+    diff -w -Z -B temp_$filename.res output.${filename: -1} || exit 2
     #mv $filepath $curr_dir/input.${filename: -1}
     #mv $curr_dir/output${filename: -1}.txt $curr_dir/output.${filename: -1}     
 done
