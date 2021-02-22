@@ -13,8 +13,9 @@ int n, k;
   {
 
       cin >> str;
-      if(i==k)
-        arr[i]='.';
+      if(i==k){
+          if(i==0) {arr[i++]='0';n++;}
+        arr[i]='.';}   
         if(i>=k)
       arr[i+1] = char(strlen(str) + (int)'0');
       else if(i<k)
