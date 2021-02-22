@@ -16,5 +16,5 @@ TODOs:
   - Separate process with timeout
   - Memory monitoring
 - CI\CD 
-  - preparing PDF and ZIP archive with test data by script 
+  - preparing PDF with test data by script 
   - Forwarding tasks to cms.vector-plus-plus.ru
