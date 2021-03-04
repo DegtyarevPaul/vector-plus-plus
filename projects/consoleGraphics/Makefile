@@ -1,2 +1,2 @@
 all:
-	g++ app.cpp conGraphLib.cpp -g -o app
+	g++ app.cpp conGraphLib.cpp -g -o app.out
