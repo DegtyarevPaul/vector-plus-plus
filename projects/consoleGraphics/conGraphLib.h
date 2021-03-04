@@ -1,7 +1,7 @@
 #pragma once
 
 #include <iostream>
-const int height=40, width=79; 
+const int height=40, width=40; 
 static char black='*', white=' ';
 static char screen[height][width];
 
@@ -21,6 +21,8 @@ class Shape
         Shape(int x, int y):x(x),y(y){}
         int getOriginX();
         int getOriginY();
+        void move(int dx, int dy);
+        void moveTo(int new_x, int new_y);
 };
 
 class Rectangle: public Shape
@@ -32,7 +34,7 @@ class Rectangle: public Shape
             Shape(0,0), x0(x0), y0(y0), x1(x1), y1(y1){}
         Rectangle(int x, int y, int x0, int y0, int x1, int y1):
             Shape(x,y), x0(x0), y0(y0), x1(x1), y1(y1){}
- 
+
         void draw();
 };
 
@@ -58,6 +60,6 @@ class Circle: public Shape
             Shape(0, 0), x0(x0),y0(y0),R(R){}
         Circle(int x, int y, int x0, int y0, int R):
             Shape(x, y), x0(x0),y0(y0),R(R){}
- 
+
         void draw();
 };

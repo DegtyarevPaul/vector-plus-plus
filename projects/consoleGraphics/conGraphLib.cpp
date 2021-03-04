@@ -14,7 +14,7 @@ void print()
     {
         for(int j=0;j<width;++j)
         {
-            cout << screen[i][j];
+            cout << screen[i][j] <<' ';
         }
         cout << endl;
     }
@@ -88,6 +88,18 @@ int Shape::getOriginX()
 int Shape::getOriginY()
 {
     return y;
+}
+
+void Shape::move(int dx, int dy)
+{
+    x+=dx;
+    y+=dy;
+}
+
+void Shape::moveTo(int new_x, int new_y)
+{
+    x = new_x;
+    y = new_y;
 }
 
 void Rectangle::draw()
