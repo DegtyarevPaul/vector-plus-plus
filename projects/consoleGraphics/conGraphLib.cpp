@@ -93,10 +93,10 @@ int Shape::getOriginY()
 void Rectangle::draw()
 {
     // сдвигаем центр фигуры
-    int t_x0 = x0-getOriginX();
-    int t_x1 = x1-getOriginX();
-    int t_y0 = y0-getOriginY();
-    int t_y1 = y1-getOriginY();
+    int t_x0 = x0+getOriginX();
+    int t_x1 = x1+getOriginX();
+    int t_y0 = y0+getOriginY();
+    int t_y1 = y1+getOriginY();
     drawLine(t_x0,t_y0,t_x1,t_y0);
     drawLine(t_x1,t_y0,t_x1,t_y1);
     drawLine(t_x1,t_y1,t_x0,t_y1);
@@ -105,8 +105,8 @@ void Rectangle::draw()
 
 void Circle::draw()
 {
-    int t_x0 = x0 - getOriginX();
-    int t_y0 = y0 - getOriginY();
+    int t_x0 = x0 + getOriginX();
+    int t_y0 = y0 + getOriginY();
 
     drawCircle(t_x0, t_y0, R);
 }

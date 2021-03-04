@@ -30,6 +30,9 @@ class Rectangle: public Shape
     public:
         Rectangle(int x0, int y0, int x1, int y1):
             Shape(0,0), x0(x0), y0(y0), x1(x1), y1(y1){}
+        Rectangle(int x, int y, int x0, int y0, int x1, int y1):
+            Shape(x,y), x0(x0), y0(y0), x1(x1), y1(y1){}
+ 
         void draw();
 };
 
@@ -40,6 +43,9 @@ class Square: public Rectangle
     public:
         Square(int x0, int y0, int size):
             Rectangle(x0, y0, x0+size, y0+size){}
+        Square(int x, int y, int x0, int y0, int size):
+            Rectangle(x, y, x0, y0, x0+size, y0+size){}
+
 
 };
 
@@ -50,5 +56,8 @@ class Circle: public Shape
     public:
         Circle(int x0, int y0, int R):
             Shape(0, 0), x0(x0),y0(y0),R(R){}
+        Circle(int x, int y, int x0, int y0, int R):
+            Shape(x, y), x0(x0),y0(y0),R(R){}
+ 
         void draw();
 };

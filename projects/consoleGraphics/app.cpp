@@ -12,5 +12,14 @@ int main()
     Circle circle1(20, 20, 5);
     circle1.draw();
 
+    // относительно центра экрана:
+    
+    Square square2(height/2, width/2,  0 , 0, 10);
+    square2.draw();
+
+    Circle circle2(height/2, width/2,  5, 5, 10);
+    circle2.draw();
+
+
     print();
 }
