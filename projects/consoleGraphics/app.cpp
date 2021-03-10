@@ -60,7 +60,7 @@ int main()
         ball1.draw();
 
         print();
-        usleep(1000*333); // ~30 frames per second
+        usleep(1000*50); // ~30 frames per second
 
     }
 }

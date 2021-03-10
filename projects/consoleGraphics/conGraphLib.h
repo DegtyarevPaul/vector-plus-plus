@@ -1,7 +1,7 @@
 #pragma once
 
 #include <iostream>
-const int height=40, width=40; 
+const int height=50, width=40; 
 static char black='*', white=' ';
 static char screen[height][width];
 
